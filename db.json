@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": "tile_001",
+      "title": "Ceramic Blue Tile",
+      "description": "Premium ceramic tile with blue glaze finish",
+      "image": "/images/tiles/tile_001.jpg",
+      "category": "ceramic",
+      "price": 45.99,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_002",
+      "title": "Matte Grey Tile",
+      "description": "Elegant matte finish tile for modern interiors",
+      "image": "/images/tiles/tile_002.jpg",
+      "category": "porcelain",
+      "price": 52.99,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Porcelain",
+      "inStock": true
+    },
+    {
+      "id": "tile_003",
+      "title": "Marble Effect Tile",
+      "description": "Luxury marble-look tile with glossy finish",
+      "image": "/images/tiles/tile_003.jpg",
+      "category": "marble",
+      "price": 68.5,
+      "currency": "USD",
+      "dimensions": "80x80 cm",
+      "material": "Porcelain",
+      "inStock": false
+    },
+    {
+      "id": "tile_004",
+      "title": "Wood Look Tile",
+      "description": "Natural wood appearance with ceramic durability",
+      "image": "/images/tiles/tile_004.jpg",
+      "category": "wood-look",
+      "price": 49.99,
+      "currency": "USD",
+      "dimensions": "20x120 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_005",
+      "title": "Black Slate Tile",
+      "description": "Dark slate tile for bold interior designs",
+      "image": "/images/tiles/tile_005.jpg",
+      "category": "stone",
+      "price": 59.99,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Slate",
+      "inStock": true
+    },
+    {
+      "id": "tile_006",
+      "title": "Beige Classic Tile",
+      "description": "Warm beige tone tile for cozy spaces",
+      "image": "/images/tiles/tile_006.jpg",
+      "category": "ceramic",
+      "price": 39.99,
+      "currency": "USD",
+      "dimensions": "45x45 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_007",
+      "title": "Hexagon Pattern Tile",
+      "description": "Stylish hexagon tiles for creative layouts",
+      "image": "/images/tiles/tile_007.jpg",
+      "category": "decorative",
+      "price": 55.0,
+      "currency": "USD",
+      "dimensions": "30x30 cm",
+      "material": "Porcelain",
+      "inStock": false
+    },
+    {
+      "id": "tile_008",
+      "title": "Glossy White Tile",
+      "description": "Bright white glossy tile for clean aesthetics",
+      "image": "/images/tiles/tile_008.jpg",
+      "category": "ceramic",
+      "price": 42.25,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_009",
+      "title": "Outdoor Anti-Slip Tile",
+      "description": "Durable anti-slip tile for outdoor use",
+      "image": "/images/tiles/tile_009.jpg",
+      "category": "outdoor",
+      "price": 64.75,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Porcelain",
+      "inStock": true
+    },
+    {
+      "id": "tile_010",
+      "title": "Vintage Pattern Tile",
+      "description": "Retro-style patterned tile for unique interiors",
+      "image": "/images/tiles/tile_010.jpg",
+      "category": "decorative",
+      "price": 58.9,
+      "currency": "USD",
+      "dimensions": "30x30 cm",
+      "material": "Ceramic",
+      "inStock": false
+    }
+  ]
+}
