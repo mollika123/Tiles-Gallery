@@ -1,5 +1,7 @@
 import { getTiles } from "@/lib/data";
+import { Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 
@@ -13,7 +15,7 @@ console.log(tiles);
           <h1 className="text-gray-500">Where everyone finds inspiration: explore and let yourself be conquered!</h1>
     
           <div className="grid md:grid-cols-2   lg:grid-cols-4 gap-6">
-            {tiles.slice(0,4).map(tile => {
+            {tiles.map(tile => {
               return (<div key={tile.id} className="shadow-xl ">
                 
             <div className="relative  w-full h-48">    <Image src={tile.image} alt="banner"  fill
@@ -31,7 +33,7 @@ console.log(tiles);
                   <FaStar />
                   <FaStar />
                     <FaStar /></div>
-                  <button className="btn rounded-full w-full border bg-gray-700 py-2 font-bold text-white"><Link href="/">View Details</Link></button>
+                  <button className="btn rounded-full w-full border bg-gray-700 py-2 font-bold text-white"><Link href={`/all-tiles/${tile.id}`}>View Details</Link></button>
               </div>
               
               </div>)

@@ -10,7 +10,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Blue", "Modern", "Glossy"]
     },
     {
       "id": "tile_002",
@@ -22,7 +23,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Porcelain",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Minimalist", "Grey", "Matte"]
     },
     {
       "id": "tile_003",
@@ -34,7 +36,8 @@
       "currency": "USD",
       "dimensions": "80x80 cm",
       "material": "Porcelain",
-      "inStock": false
+      "inStock": false,
+      "tags": ["Luxury", "Marble", "Elegant"]
     },
     {
       "id": "tile_004",
@@ -46,7 +49,8 @@
       "currency": "USD",
       "dimensions": "20x120 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Wood", "Natural", "Warm"]
     },
     {
       "id": "tile_005",
@@ -58,7 +62,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Slate",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Black", "Bold", "Stone"]
     },
     {
       "id": "tile_006",
@@ -70,7 +75,8 @@
       "currency": "USD",
       "dimensions": "45x45 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Beige", "Cozy", "Classic"]
     },
     {
       "id": "tile_007",
@@ -82,7 +88,8 @@
       "currency": "USD",
       "dimensions": "30x30 cm",
       "material": "Porcelain",
-      "inStock": false
+      "inStock": false,
+      "tags": ["Geometric", "Creative", "Decorative"]
     },
     {
       "id": "tile_008",
@@ -94,7 +101,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["White", "Clean", "Bright"]
     },
     {
       "id": "tile_009",
@@ -106,9 +114,10 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Porcelain",
-      "inStock": true
-    }, 
-        {
+      "inStock": true,
+      "tags": ["Outdoor", "Safety", "Anti-slip"]
+    },
+    {
       "id": "tile_011",
       "title": "Stone Beige Matte Tile",
       "description": "Soft beige stone-look tile with matte finish for elegant interiors",
@@ -118,7 +127,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Porcelain",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Stone", "Beige", "Minimal"]
     },
     {
       "id": "tile_012",
@@ -130,9 +140,9 @@
       "currency": "USD",
       "dimensions": "30x60 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Ocean", "Blue", "Glossy"]
     },
-    
     {
       "id": "tile_013",
       "title": "Rustic Brown Wood Tile",
@@ -143,7 +153,8 @@
       "currency": "USD",
       "dimensions": "20x120 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Rustic", "Wood", "Brown"]
     },
     {
       "id": "tile_014",
@@ -155,7 +166,8 @@
       "currency": "USD",
       "dimensions": "80x80 cm",
       "material": "Porcelain",
-      "inStock": false
+      "inStock": false,
+      "tags": ["Luxury", "White", "Marble"]
     },
     {
       "id": "tile_015",
@@ -167,7 +179,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Slate",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Charcoal", "Dark", "Modern"]
     },
     {
       "id": "tile_016",
@@ -179,7 +192,8 @@
       "currency": "USD",
       "dimensions": "45x45 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Cream", "Soft", "Minimalist"]
     },
     {
       "id": "tile_017",
@@ -191,7 +205,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Porcelain",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Outdoor", "Grip", "Durable"]
     },
     {
       "id": "tile_018",
@@ -203,7 +218,8 @@
       "currency": "USD",
       "dimensions": "30x30 cm",
       "material": "Porcelain",
-      "inStock": false
+      "inStock": false,
+      "tags": ["Hexa", "Modern", "Pattern"]
     }
   ]
 }

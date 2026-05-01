@@ -20,13 +20,21 @@ const TilesDetailsPage = async ({params}) => {
           <h1 className='text-2xl font-bold'>{ tile.title}</h1>
           <h1 className='text-gray-500'>{tile.description}</h1>
           <p className="text-xl text-green-400">{tile.price}{tile.currency}</p>
-          <p className={tile.inStock?"text-green-600":"text-red-500"}>{tile.inStock?"In Stock":"Out of Stock" }</p>
+          <p className={tile.inStock ? "text-green-600" : "text-red-500"}>{tile.inStock ? "In Stock" : "Out of Stock"}</p>
+          <hr />
           <ul>
             <li><strong>Material:</strong>{ tile.material}</li>
             <li><strong>Dimensions:</strong>{tile.dimensions }</li>
             <li><strong>Category:</strong>{tile.category }</li>
           </ul>
-          
+          <div className='flex gap-2'>
+            {tile.tags?.map(tag => {
+              return (<a key={tag} href={`/tags/${tag}`} className='px-2 py-1 bg-gray-500 rounded-md gap-3 text-white font-bold'>{tag }</a>
+              
+            )
+            }
+            )}
+          </div>
           <button className='bg-blue-400 rounded-full text-white py-2.5 px-4'>Add to cart</button>
         </div>
        </div>
