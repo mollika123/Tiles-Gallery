@@ -7,7 +7,7 @@ import { FaStar } from "react-icons/fa";
 
 const Products =async () => {
     const tiles = await getTiles();
-  console.log(tiles);
+  // console.log(tiles);
   return (
    <div className="w-11/12 mx-auto space-y-5 py-8">
         <h1 className="text-5xl text-gray-800 text-semibold mt-8">Top Products</h1>
@@ -32,7 +32,8 @@ const Products =async () => {
                 <FaStar />
                 <FaStar />
                   <FaStar /></div>
-                <button className="btn rounded-full w-full border bg-gray-700 py-2 font-bold text-white"><Link href="/">View Details</Link></button>
+                <button className="btn rounded-full w-full border bg-gray-700 py-2 font-bold text-white">
+                  <Link href={`/all-tiles/${tile.id}`}>View Details</Link></button>
             </div>
             
             </div>)
