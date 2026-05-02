@@ -83,7 +83,7 @@ const Register = () => {
         <FieldError />
           </TextField>
            <TextField
-            isRequired
+            
             name="image"
            
           >
