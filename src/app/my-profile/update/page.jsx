@@ -60,7 +60,7 @@ const UpdateProfile = () => {
 
       {/* 🖼 Image Preview */}
       <Image
-        src={image || user.image || avatar}
+        src={image || user?.image || avatar}
         alt="profile"
         width={150}
         height={150}

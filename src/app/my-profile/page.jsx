@@ -17,7 +17,7 @@ const MyProfile = () => {
     <div className="max-w-md mx-auto p-9 shadow-xl py-8 my-8 text-center">
       
       <Image
-        src={user.image || "/default-avatar.png"}
+        src={user?.image || avatar}
         alt="profile"
         width={200}
         height={200}
