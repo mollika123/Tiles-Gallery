@@ -17,7 +17,7 @@ const MyProfile = () => {
     <div className="max-w-md mx-auto p-9 shadow-xl py-8 my-8 text-center">
       
       <Image
-        src={user.image || avatar}
+        src={user.image || avatar.src}
         alt="profile"
         width={200}
         height={200}
@@ -27,7 +27,7 @@ const MyProfile = () => {
       <h2 className="text-xl font-bold mt-4">{user.name}</h2>
       <p className="text-gray-500">{user.email}</p>
 
-      {/* 🔥 Update Button */}
+
       <Link href="/my-profile/update">
         <button className="mt-5 bg-orange-600 text-white px-4 py-2 rounded w-full">
           Update Information
