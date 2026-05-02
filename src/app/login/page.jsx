@@ -54,7 +54,7 @@ export default function LogInPage() {
 
 
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
+    <Card className="border w-11/12 mx-auto  py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Login</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
