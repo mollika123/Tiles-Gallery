@@ -54,10 +54,11 @@ export default function LogInPage() {
 
 
   return (
-    <Card className="border w-11/12 mx-auto  py-10 mt-5">
+    <div className="w-11/12 mx-auto  py-10 mt-5">
+            <div className="flex max-w-md shadow-md flex-col justify-center items-center p-8">
       <h1 className="text-center text-2xl font-bold">Login</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex  mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField
           isRequired
           name="email"
@@ -112,16 +113,19 @@ export default function LogInPage() {
         </div>
          <p className="text-center">Or</p>
 
-      <Button onClick={handleGoogleSignIn}  className={'w-full bg-blue-600'}><GrGoogle /> Log In With Google</Button>
-      </Form>
-
-      
-       <div className="text-center mt-4">  <p className="">
+          <Button onClick={handleGoogleSignIn} className={'w-full bg-blue-600'}><GrGoogle /> Log In With Google</Button>
+           <div className="text-center mt-4">
+          <p className="">
           Don't have an account?{" "}
           <Link href={"/register"} className="text-blue-500">
             <button>Register</button>
           </Link>
         </p></div>
-    </Card>
+      </Form>
+
+      
+       
+        </div>
+    </div>
   );
 }

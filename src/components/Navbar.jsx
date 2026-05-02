@@ -16,8 +16,8 @@ const Navbar = () => {
   if (isLoading) return null;
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
+    <nav className="sticky top-0 z-50 w-full  border-b border-gray-100 bg-white/80 backdrop-blur-md shadow-sm">
+      <div className="mx-auto flex w-11/12 items-center justify-between p-4 lg:px-8">
         
         {/* Logo Section */}
         <div className="flex lg:flex-1">
