@@ -17,16 +17,19 @@ import { GrGoogle } from "react-icons/gr";
 
 export default function LogInPage() {
     const router = useRouter();
-  const onSubmit = async (e) => {
+  const onSubmit =async (e) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const userData = Object.fromEntries(formData.entries());
+    console.log('form submitted with', userData);
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-
-    const { data, error } = await authClient.signIn.email({
-      email,
-      password,
-      callbackURL: "/",
+   const { data, error } = await authClient.signIn.email({
+  
+      email: userData.email,
+   
+      password: userData.password,
+      callbackURL:'/'
+      
     });
 
     console.log({ data, error });
@@ -35,7 +38,7 @@ export default function LogInPage() {
       return;
     }
 
-    alert("Login  successful");
+ 
 
     // 🔥 redirect MUST be here
     router.push("/");
@@ -101,18 +104,16 @@ export default function LogInPage() {
 
         <div className="flex gap-2">
           <Button type="submit">
-            <Check />
-            Submit
+    
+            Login
           </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
+         
         </div>
       </Form>
 
       <p className="text-center">Or</p>
 
-      <Button onClick={handleGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle /> Sign In With Google</Button>
+      <Button onClick={handleGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle /> Log In With Google</Button>
       
          <p className="mt-4">
           Don't have an account?{" "}

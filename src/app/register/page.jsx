@@ -8,6 +8,7 @@ import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { GrGoogle } from "react-icons/gr";
 
 
 const Register = () => {
@@ -22,7 +23,7 @@ const Register = () => {
     const { data, error } = await authClient.signUp.email({
       name: userData.name,
       email: userData.email,
-      photo:userData.photo,
+     image:userData.image,
       password: userData.password,
       callbackURL:'/login'
       
@@ -37,6 +38,11 @@ const Register = () => {
       
     }
   };
+    const handleGoogleSignIn = async () => {
+      await authClient.signIn.social({
+          provider: 'google'
+      })
+    }
   return (
     <div className="w-11/12 mx-auto py-9">
         <div className="flex justify-center items-center p-8">
@@ -78,11 +84,11 @@ const Register = () => {
           </TextField>
            <TextField
             isRequired
-            name="photo"
+            name="image"
            
           >
             <Label>Photo</Label>
-            <Input name="photo" placeholder="Photo Url" />
+            <Input name="image" placeholder="Photo Url" />
             <FieldError />
           </TextField>
       <TextField
@@ -121,8 +127,12 @@ const Register = () => {
          <button className="px-3 bg-blue-400 text-white rounded-lg py-2">Login</button>
           </Link>
         </p></div>
-      </div>
-    </Form>
+          </div>
+           <p className="text-center">Or</p>
+        
+              <Button onClick={handleGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle /> Register With Google</Button>
+        </Form>
+         
     </div>
     </div>
   );

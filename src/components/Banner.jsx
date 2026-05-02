@@ -34,7 +34,7 @@ const Banner = () => {
       </div>
 
       {/* 🔥 Overlay */}
-      <div className="absolute inset-0 bg-black/10 z-10"></div>
+      <div className="absolute inset-0 bg-black/5 z-10"></div>
 
       {/* 🔥 Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center">
