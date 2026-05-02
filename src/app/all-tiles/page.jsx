@@ -14,12 +14,12 @@ const AllTilesPage = () => {
 
   // 🔥 Fetch from public/data.json
   useEffect(() => {
-    fetch("/data.json", { cache: "no-store" })
+    fetch("https://tiles-gallery-murex.vercel.app/data.json", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => {
       
 
-        setTiles(data.products); // যদি direct array হয়
+        setTiles(data.products); 
         setLoading(false);
       })
       .catch((err) => {

@@ -1,7 +1,7 @@
 export async function getTiles() {
-  const res = await fetch('/data.json', {
+  const res = await fetch('https://tiles-gallery-murex.vercel.app/data.json', {
     cache: "no-store", // optional
   });
   const data = await res.json();
-  return data;
+  return data.products;
 }
