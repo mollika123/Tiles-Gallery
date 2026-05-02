@@ -17,10 +17,9 @@ const AllTilesPage = () => {
     fetch("/data.json", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => {
-        // ⚠️ যদি data.json = { products: [] } হয় তাহলে নিচেরটা use করো
-        // setTiles(data.products);
+      
 
-        setTiles(data); // যদি direct array হয়
+        setTiles(data.products); // যদি direct array হয়
         setLoading(false);
       })
       .catch((err) => {
