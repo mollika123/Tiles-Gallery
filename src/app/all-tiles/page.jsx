@@ -10,49 +10,48 @@ import { RotatingLines } from "react-loader-spinner";
 const AllTilesPage = () => {
   const [tiles, setTiles] = useState([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
-  // fetch data
+  // 🔥 Fetch from public/data.json
   useEffect(() => {
-    setLoading(true);
-
-    fetch("https://tiles-gallery-murex.vercel.app/products")
+    fetch("/data.json", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => {
-        setTiles(data);
+        // ⚠️ যদি data.json = { products: [] } হয় তাহলে নিচেরটা use করো
+        // setTiles(data.products);
+
+        setTiles(data); // যদি direct array হয়
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Fetch error:", err);
         setLoading(false);
       });
   }, []);
 
-  // filter tiles
+  // 🔍 Search filter
   const filteredTiles = tiles.filter((tile) =>
     tile.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  // 🔥 LOADING UI (IMPORTANT)
+  // 🔄 Loading UI
   if (loading) {
     return (
-  <div className="flex min-h-screen justify-center items-center ">
-
-
-          <RotatingLines></RotatingLines>
-        </div>
+      <div className="flex min-h-screen justify-center items-center">
+        <RotatingLines />
+      </div>
     );
   }
 
   return (
-    <div className="w-11/12 mx-auto space-y-5 py-8">
-      
-      <h1 className="text-5xl text-gray-900 font-semibold mt-8">
+    <div className="w-11/12 mx-auto space-y-6 py-8">
+      {/* Title */}
+      <h1 className="text-4xl md:text-5xl font-semibold text-gray-900">
         All Tiles Products
       </h1>
 
       <p className="text-gray-500">
-        Where everyone finds inspiration: explore and let yourself be conquered!
+        Explore beautiful tiles and find your perfect design.
       </p>
 
       {/* 🔍 Search */}
@@ -72,8 +71,11 @@ const AllTilesPage = () => {
           </p>
         ) : (
           filteredTiles.map((tile) => (
-            <div key={tile.id} className="shadow-lg rounded-xl overflow-hidden bg-white">
-              
+            <div
+              key={tile.id}
+              className="shadow-lg rounded-xl overflow-hidden bg-white"
+            >
+              {/* Image */}
               <div className="relative w-full h-48">
                 <Image
                   src={tile.image}
@@ -86,25 +88,32 @@ const AllTilesPage = () => {
                 </Chip>
               </div>
 
+              {/* Content */}
               <div className="p-5 space-y-3">
                 <h2 className="text-lg font-semibold text-gray-800">
                   {tile.title}
                 </h2>
 
-                <p className="font-bold text-gray-900">${tile.price}</p>
-                <p className="text-sm text-gray-500">{tile.dimensions}</p>
+                <p className="font-bold text-gray-900">
+                  ${tile.price}
+                </p>
 
+                <p className="text-sm text-gray-500">
+                  {tile.dimensions}
+                </p>
+
+                {/* ⭐ Rating */}
                 <div className="flex text-yellow-500 gap-1">
                   <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
 
+                {/* Button */}
                 <Link href={`/all-tiles/${tile.id}`}>
-                  <button className="rounded-full w-full bg-gray-600 py-2 font-bold text-white hover:bg-blue-700 transition">
+                  <button className="w-full bg-gray-700 text-white py-2 rounded-lg hover:bg-blue-600 transition">
                     View Details
                   </button>
                 </Link>
               </div>
-
             </div>
           ))
         )}
