@@ -115,22 +115,24 @@ const Register = () => {
         <FieldError />
       </TextField>
       <div className="flex gap-2">
-        <Button type="submit">
+        <Button type="submit" className='bg-blue-600 w-full'>
           <Check />
          Register
         </Button>
-      
-            <div className="flex mt-4justify-center items-center">
+       </div>
+            
+         
+           <p className="text-center">Or</p>
+        
+          <Button onClick={handleGoogleSignIn} variant="outline" className={'w-full bg-blue-600 text-white'}><GrGoogle /> Register With Google</Button>
+          
+          <div className="text-center">
               <p className="mt-4 text-center">
           Already have an account?{" "}
           <Link href={"/login"} className="text-blue-500">
-         <button className="px-3 bg-blue-400 text-white rounded-lg py-2">Login</button>
+         <button className="px-3  text-blue-600 font-bold rounded-lg py-2">Login Here</button>
           </Link>
         </p></div>
-          </div>
-           <p className="text-center">Or</p>
-        
-              <Button onClick={handleGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle /> Register With Google</Button>
         </Form>
          
     </div>

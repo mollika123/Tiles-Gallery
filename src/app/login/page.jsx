@@ -103,24 +103,25 @@ export default function LogInPage() {
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button type="submit" className='w-full bg-blue-600'>
     
             Login
           </Button>
          
+     
         </div>
+         <p className="text-center">Or</p>
+
+      <Button onClick={handleGoogleSignIn}  className={'w-full bg-blue-600'}><GrGoogle /> Log In With Google</Button>
       </Form>
 
-      <p className="text-center">Or</p>
-
-      <Button onClick={handleGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle /> Log In With Google</Button>
       
-         <p className="mt-4">
+       <div className="text-center mt-4">  <p className="">
           Don't have an account?{" "}
           <Link href={"/register"} className="text-blue-500">
             <button>Register</button>
           </Link>
-        </p>
+        </p></div>
     </Card>
   );
 }
