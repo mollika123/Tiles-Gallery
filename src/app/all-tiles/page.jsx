@@ -10,7 +10,7 @@ import { RotatingLines } from "react-loader-spinner";
 const AllTilesPage = () => {
   const [tiles, setTiles] = useState([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true); // ✅ FIXED
+  const [loading, setLoading] = useState(true); 
 
   // fetch data
   useEffect(() => {
@@ -47,7 +47,7 @@ const AllTilesPage = () => {
   return (
     <div className="w-11/12 mx-auto space-y-5 py-8">
       
-      <h1 className="text-5xl text-gray-800 font-semibold mt-8">
+      <h1 className="text-5xl text-gray-900 font-semibold mt-8">
         All Tiles Products
       </h1>
 
