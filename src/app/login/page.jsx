@@ -55,10 +55,11 @@ export default function LogInPage() {
 
   return (
     <div className="w-11/12 mx-auto  py-10 mt-5">
-            <div className="flex max-w-md shadow-md flex-col justify-center items-center p-8">
-      <h1 className="text-center text-2xl font-bold">Login</h1>
+            <div className="flex   justify-center items-center p-8">
+    
 
-      <Form className="flex  mx-auto flex-col gap-4" onSubmit={onSubmit}>
+        <Form className="flex card shadow-xl mx-auto flex-col gap-4" onSubmit={onSubmit}>
+            <h1 className="text-center text-2xl font-bold">Login</h1>
         <TextField
           isRequired
           name="email"
